@@ -1,10 +1,10 @@
-package com.mindock.springbootpractice
+package com.mindock.springbootweb
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class SpringBootPracticeApplicationTests {
+class SpringBootWebApplicationTests {
 
     @Test
     fun contextLoads() {
