@@ -4,8 +4,10 @@ import com.mindock.springapplicationinit.listener.StartingEventListener
 import org.springframework.boot.WebApplicationType
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.builder.SpringApplicationBuilder
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan
 
 @SpringBootApplication
+@ConfigurationPropertiesScan
 class SpringApplicationInitApplication
 
 fun main(args: Array<String>) {
