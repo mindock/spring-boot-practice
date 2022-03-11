@@ -6,6 +6,7 @@ plugins {
 
     kotlin("jvm") version "1.6.0"
     kotlin("plugin.spring") version "1.6.0"
+    kotlin("kapt") version "1.6.0"
 }
 
 allprojects {
@@ -22,6 +23,7 @@ subprojects {
         plugin("java")
         plugin("kotlin")
         plugin("kotlin-spring")
+        plugin("kotlin-kapt")
         plugin("org.springframework.boot")
         plugin("io.spring.dependency-management")
     }
