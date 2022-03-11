@@ -1,6 +1,7 @@
 package com.mindock.springapplicationinit.application
 
 import com.mindock.springapplicationinit.config.ProjectOwnerProperties
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.core.annotation.Order
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component
 @Component
 class SecondApplicationRunner(
     private val projectOwnerProperties: ProjectOwnerProperties,
+    private val hello: String,
 ): ApplicationRunner {
 
     override fun run(args: ApplicationArguments?) {
@@ -20,5 +22,6 @@ class SecondApplicationRunner(
         println("(properties) project owner's full name is ${projectOwnerProperties.fullName}")
         println("(properties) project owner's session timeout is ${projectOwnerProperties.sessionTimeout}")
         println("=========================")
+        println("hello bean: $hello")
     }
 }
