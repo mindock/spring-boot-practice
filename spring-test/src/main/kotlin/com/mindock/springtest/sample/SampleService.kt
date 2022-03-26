@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service
 class SampleService {
 
     fun getName(): String {
-        return "sample-service"
+        return "sample-service change~!"
     }
 }
