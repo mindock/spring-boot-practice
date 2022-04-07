@@ -7,13 +7,14 @@ import org.springframework.stereotype.Component
 import javax.sql.DataSource
 
 @Component
-class H2Runner(
+class JDBCRunner(
     private val dataSource: DataSource,
     private val jdbcTemplate: JdbcTemplate,
 ) : ApplicationRunner {
 
     override fun run(args: ApplicationArguments?) {
         dataSource.connection.use { connection ->
+            println("datasource: ${dataSource.javaClass}")
             println("url: ${connection.metaData.url}")
             println("userName: ${connection.metaData.userName}")
 
