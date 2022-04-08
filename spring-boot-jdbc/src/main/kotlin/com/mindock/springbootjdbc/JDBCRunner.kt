@@ -15,14 +15,15 @@ class JDBCRunner(
     override fun run(args: ApplicationArguments?) {
         dataSource.connection.use { connection ->
             println("datasource: ${dataSource.javaClass}")
+            println("driverName: ${connection.metaData.driverName}")
             println("url: ${connection.metaData.url}")
             println("userName: ${connection.metaData.userName}")
 
             val statement = connection.createStatement()
-            val sql = "CREATE TABLE USER(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (ID))"
+            val sql = "CREATE TABLE ACCOUNT(ID INTEGER NOT NULL, name VARCHAR(255), PRIMARY KEY (ID))"
             statement.executeUpdate(sql)
         }
 
-        jdbcTemplate.execute("INSERT INTO USER VALUES (1, 'mindock')")
+        jdbcTemplate.execute("INSERT INTO ACCOUNT VALUES (1, 'mindock')")
     }
 }
