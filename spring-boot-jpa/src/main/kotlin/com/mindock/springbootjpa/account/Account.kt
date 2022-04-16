@@ -14,4 +14,6 @@ class Account(
     val userName: String,
 
     val password: String,
+
+    val active: Boolean,
 )
